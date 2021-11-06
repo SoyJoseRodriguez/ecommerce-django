@@ -34,7 +34,7 @@
                       />
                     </div>
                     <figcaption class="info">
-                      <a href="#" class="title text-dark"
+                      <a href="{{cart_item.product.get_url}}" class="title text-dark"
                         >{{cart_item.product.product_name}}</a
                       >
                       <p class="text-muted small">
@@ -126,7 +126,7 @@
             <a href="./place-order.html" class="btn btn-primary btn-block">
               Pagar
             </a>
-            <a href="./store.html" class="btn btn-light btn-block"
+            <a href="{% url 'store' %}" class="btn btn-light btn-block"
               >Continua comprando</a
             >
           </div>
