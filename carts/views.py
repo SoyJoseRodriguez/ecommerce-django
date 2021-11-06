@@ -28,7 +28,7 @@ def add_cart(request, product_id):
         cart_item.quantity += 1
         cart_item.save()
     except CartItem.DoesNotExist:
-        cart_item = cart_item.objects.create(
+        cart_item = CartItem.objects.create(
             product=product,
             quantity=1,
             cart=cart,

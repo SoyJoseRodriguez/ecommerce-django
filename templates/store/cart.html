@@ -3,7 +3,13 @@
 <section class="section-content padding-y bg">
   <div class="container">
     <!-- ============================ COMPONENT 1 ================================= -->
-
+    {% if not cart_items %}
+      <h2 class="text-center">¡El carrito de compras esta vacio!</h2>
+      <br>
+      <div class="text-center">
+        <a href="{% url 'store' %}" class="btn btn-primary">Continua comprando</a>
+      </div>
+    {% else %}
     <div class="row">
       <aside class="col-lg-9">
         <div class="card">
@@ -132,7 +138,8 @@
     </div>
     <!-- row.// -->
     <!-- ============================ COMPONENT 1 END .// ================================= -->
-  </div>
+    {% endif %}
+    </div>
   <!-- container .//  -->
 </section>
 <!-- ========================= SECTION CONTENT END// ========================= -->
