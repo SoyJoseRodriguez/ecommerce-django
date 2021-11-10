@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarTop4">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-      <a href="#" class="nav-link">   EspaÑol </a>
+      <a href="#" class="nav-link">   Español </a>
 
     </li>
     <li class="nav-item dropdown">
@@ -78,7 +78,7 @@
           <div class="widget-header">
             <small class="title text-muted">¡Hola Bienvenido {{user.first_name}}!</small>
             <div>
-              <a href="#">Tabla de opciones</a> <span class="dark-transp"> | </span>
+              <a href="{% url 'dashboard' %}">Gestion de informes</a> <span class="dark-transp"> | </span>
               <a href="{% url 'logout' %}">Salir de sesion</a>
             </div>
           </div>
