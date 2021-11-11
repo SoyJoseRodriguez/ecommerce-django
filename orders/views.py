@@ -6,6 +6,9 @@ import datetime
 # Create your views here.
 
 
+def payments(request):
+    return render(request, 'orders/payments.html')
+
 def place_order(request, total=0, quantity=0):
     current_user = request.user
     cart_items = CartItem.objects.filter(user=current_user)
@@ -50,7 +53,7 @@ def place_order(request, total=0, quantity=0):
             dt = int(datetime.date.today().strftime('%d'))
             d = datetime.date(yr, mt, dt)
             current_date = d.strftime("%Y%m%d")
-            # 20280110
+            
             order_number = current_date + str(data.id)
             data.order_number = order_number
             data.save()
